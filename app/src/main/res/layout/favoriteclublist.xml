@@ -40,6 +40,7 @@
         android:layout_height="400dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:background="?attr/colorControlHighlight" />
+        android:background="?attr/colorControlHighlight"
+        android:id="@+id/fav_list" />
 
 </RelativeLayout>

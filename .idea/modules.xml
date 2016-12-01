@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ClubConnectHomePage.iml" filepath="$PROJECT_DIR$/ClubConnectHomePage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EC327-App.iml" filepath="$PROJECT_DIR$/EC327-App.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -9,7 +9,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="16dp"
-    tools:context="com.example.abigail.clubconnecthomepage.MainActivity">
+    tools:context="com.example.abigail.clubconnecthomepage.ListingsActivity">
 
     <ImageView
         android:layout_width="50dp"
@@ -37,6 +37,7 @@
 
     <ListView
         android:layout_width="match_parent"
+        android:id = "@+id/club_list_view"
         android:layout_height="400dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
