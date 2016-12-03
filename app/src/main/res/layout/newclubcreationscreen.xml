@@ -11,16 +11,6 @@
     android:paddingTop="16dp"
     tools:context="com.example.abigail.clubconnecthomepage.NewClubActivity">
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:srcCompat="@drawable/cc"
-        android:id="@+id/imageView2"
-        android:scaleType="fitStart"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp" />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,77 +40,93 @@
         android:textColor="@android:color/background_dark" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="Username"
+        android:hint=" Username"
         android:ems="10"
-        android:layout_below="@+id/textView2"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="13dp"
         android:id="@+id/editText20"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:background="@android:drawable/alert_light_frame" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="Name"
+        android:hint=" Name"
         android:ems="10"
-        android:layout_below="@+id/editText20"
-        android:layout_toRightOf="@+id/editText20"
-        android:layout_toEndOf="@+id/textView2"
-        android:layout_marginTop="11dp"
         android:id="@+id/editText7"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:background="@android:drawable/alert_light_frame"
+        android:layout_below="@+id/editText20"
+        android:layout_alignLeft="@+id/editText20"
+        android:layout_alignStart="@+id/editText20" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="Keywords"
+        android:hint=" Keywords"
         android:ems="10"
+        android:id="@+id/editText8"
+        android:background="@android:drawable/alert_light_frame"
         android:layout_below="@+id/editText7"
-        android:layout_alignRight="@+id/editText7"
-        android:layout_alignEnd="@+id/editText7"
-        android:layout_marginTop="22dp"
-        android:id="@+id/editText8" />
+        android:layout_alignLeft="@+id/editText7"
+        android:layout_alignStart="@+id/editText7" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:layout_marginTop="14dp"
         android:id="@+id/editText9"
-        android:hint="Email"
+        android:hint=" Email"
+        android:background="@android:drawable/alert_light_frame"
         android:layout_below="@+id/editText8"
         android:layout_alignLeft="@+id/editText8"
         android:layout_alignStart="@+id/editText8" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:layout_below="@+id/editText9"
-        android:layout_alignRight="@+id/editText9"
-        android:layout_alignEnd="@+id/editText9"
-        android:layout_marginTop="17dp"
         android:id="@+id/editText10"
-        android:hint="Description" />
+        android:hint=" Description"
+        android:background="@android:drawable/alert_light_frame"
+        android:layout_below="@+id/editText9"
+        android:layout_alignLeft="@+id/editText9"
+        android:layout_alignStart="@+id/editText9" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/cc"
+        android:id="@+id/imageView2"
+        android:scaleType="fitStart"
+        android:contentDescription=""
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
         android:id="@+id/button7"
         android:textSize="24sp"
         android:background="@android:color/holo_green_light"
-        style="@style/Widget.AppCompat.Button.Colored" />
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_above="@+id/editText20"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView" />
+    //android:layout_toRightOf="@+id/editText10"
+        android:layout_toEndOf="@+id/editText10"
+        android:layout_marginBottom="11dp" />
 
 </RelativeLayout>
