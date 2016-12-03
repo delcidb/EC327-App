@@ -53,11 +53,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Username"
         android:ems="10"
         android:layout_below="@+id/textView2"
-        android:layout_toRightOf="@+id/imageView2"
-        android:layout_toEndOf="@+id/imageView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginTop="11dp"
+        android:id="@+id/editText20"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:ems="10"
+        android:layout_below="@+id/editText20"
+        android:layout_toRightOf="@+id/editText20"
+        android:layout_toEndOf="@+id/textView2"
         android:layout_marginTop="11dp"
         android:id="@+id/editText7"
         android:textSize="18sp" />
@@ -66,7 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Keywords"
+        android:hint="Keywords"
         android:ems="10"
         android:layout_below="@+id/editText7"
         android:layout_alignRight="@+id/editText7"
@@ -81,7 +94,7 @@
         android:ems="10"
         android:layout_marginTop="14dp"
         android:id="@+id/editText9"
-        android:text="Email"
+        android:hint="Email"
         android:layout_below="@+id/editText8"
         android:layout_alignLeft="@+id/editText8"
         android:layout_alignStart="@+id/editText8" />
@@ -96,7 +109,7 @@
         android:layout_alignEnd="@+id/editText9"
         android:layout_marginTop="17dp"
         android:id="@+id/editText10"
-        android:text="Description" />
+        android:hint="Description" />
 
     <Button
         android:text="Save"
@@ -104,7 +117,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="50dp"
         android:id="@+id/button7"
         android:textSize="24sp"
         android:background="@android:color/holo_green_light"
