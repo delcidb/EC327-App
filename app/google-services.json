@@ -1,0 +1,148 @@
+{
+  "project_info": {
+    "project_number": "1040403445560",
+    "firebase_url": "https://fir-practice-7403d.firebaseio.com",
+    "project_id": "fir-practice-7403d",
+    "storage_bucket": "fir-practice-7403d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040403445560:android:1ada881ff0072eb3",
+        "android_client_info": {
+          "package_name": "com.example.android.firebase_practice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040403445560-lpim2vq2s5f7cljbmtvm2vtivk4ru9kf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6A1fpJVTf_VdMmZ_P4ser1IEOW3Uez3s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040403445560:android:b5d75907de594a2d",
+        "android_client_info": {
+          "package_name": "com.google.firebase.codelab.friendlychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040403445560-lpim2vq2s5f7cljbmtvm2vtivk4ru9kf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6A1fpJVTf_VdMmZ_P4ser1IEOW3Uez3s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040403445560:android:7cae6599184b5cd8",
+        "android_client_info": {
+          "package_name": "com.example.abigail.clubconnecthomepage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040403445560-lpim2vq2s5f7cljbmtvm2vtivk4ru9kf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6A1fpJVTf_VdMmZ_P4ser1IEOW3Uez3s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040403445560:android:623d9a2d7d276d47",
+        "android_client_info": {
+          "package_name": "com.example.katrina.ec327"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040403445560-5o2j9ku81ht78poep2tp3k23aid0h4mg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.katrina.ec327",
+            "certificate_hash": "03B7560DEEB085BC9AED3685991248E5C7E937EA"
+          }
+        },
+        {
+          "client_id": "1040403445560-lpim2vq2s5f7cljbmtvm2vtivk4ru9kf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6A1fpJVTf_VdMmZ_P4ser1IEOW3Uez3s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1040403445560-lpim2vq2s5f7cljbmtvm2vtivk4ru9kf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

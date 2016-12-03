@@ -15,7 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Club_Instruction"> </activity>
         <activity android:name=".NewClubActivity"> </activity>
+        <activity android:name=".Student_Connect"> </activity>
+        <activity android:name=".Student_Search"> </activity>
+        <activity android:name=".Edit_My_Club"> </activity>
+
     </application>
 
 </manifest>
