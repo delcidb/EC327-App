@@ -1,10 +1,7 @@
 package com.example.abigail.clubconnecthomepage;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,14 +11,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-
-import java.io.File;
-
-import static android.R.attr.data;
-import static android.R.attr.value;
-import static android.R.id.edit;
 
 
 /**
@@ -50,7 +40,7 @@ public class Edit_My_Club extends Activity{
         // Listen for SAVE clicks and write the edit text fields to Firebase
         Button button = (Button) findViewById(R.id.button7);
         button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+            public void onClick(final View v) {
                 // Overwrite to database on save click; Specific to username so will overwrite fields
                 // based on entered username
 
@@ -66,11 +56,42 @@ public class Edit_My_Club extends Activity{
                             final DatabaseReference emailRef = newClubusername.child("Email");
                             final DatabaseReference keywordsRef = newClubusername.child("Keywords");
 
+
                             newClubusername.setValue(username.getText().toString());
-                            newClubNames.setValue(club_name.getText().toString());
-                            descripRef.setValue(descrip.getText().toString());
-                            emailRef.setValue(email.getText().toString());
-                            keywordsRef.setValue(keywords.getText().toString());
+                            if(club_name.getText().toString().matches("")) {
+                                // If nothing was entered, keep the current value in the name key:value
+                                String val = dataSnapshot.child(username.getText().toString()).child("Name").getValue().toString();
+                                newClubNames.setValue(val);
+                            }
+                            else {
+                                newClubNames.setValue(club_name.getText().toString());
+                            }
+                            if(keywords.getText().toString().matches("")) {
+                                // If nothing was entered, keep the current value in the name key:value
+                                String val_k = dataSnapshot.child(username.getText().toString()).child("Keywords").getValue().toString();
+                                keywordsRef.setValue(val_k);
+                            }
+                            else {
+                                keywordsRef.setValue(keywords.getText().toString());
+                            }
+                            if(email.getText().toString().matches("")) {
+                                // If nothing was entered, keep the current value in the name key:value
+                                String val_n = dataSnapshot.child(username.getText().toString()).child("Email").getValue().toString();
+                                emailRef.setValue(val_n);
+                            }
+                            else {
+                                emailRef.setValue(email.getText().toString());
+                            }
+                            if(descrip.getText().toString().matches("")) {
+                                // If nothing was entered, keep the current value in the name key:value
+                                String val_d = dataSnapshot.child(username.getText().toString()).child("Description").getValue().toString();
+                                descripRef.setValue(val_d);
+                            }
+                            else {
+                                descripRef.setValue(descrip.getText().toString());
+                            }
+
+                            // Inform the user of a succesful update provided the current username admins a club
                             Toast.makeText(getApplicationContext(),"Update Successful!",Toast.LENGTH_LONG).show();
 
                         }

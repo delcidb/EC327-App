@@ -45,47 +45,24 @@ public class NewClubActivity extends Activity {
                 ref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        if(!dataSnapshot.hasChild(username.getText().toString())) { // Checks to be sure user only owns one club
+                        if(!dataSnapshot.hasChild(username.getText().toString()))
+                        { // Checks to be sure user only owns one club
                             final DatabaseReference newClubusername = ref.child(username.getText().toString());
                             final DatabaseReference newClubNames = newClubusername.child("Name");
                             final DatabaseReference descripRef = newClubusername.child("Description");
                             final DatabaseReference emailRef = newClubusername.child("Email");
                             final DatabaseReference keywordsRef = newClubusername.child("Keywords");
 
-                            if(club_name.toString().equals("")) {
-                                newClubNames.setValue(club_name.getText().toString());
-                            }
-                            else {
-                                Toast.makeText(getApplicationContext(),"Must add a club name",Toast.LENGTH_LONG).show();
-                                return;
-                            }
-                            if(descrip.toString().equals("")) {
-                                descripRef.setValue(descrip.getText().toString());
-                            }
-                            else {
-                                Toast.makeText(getApplicationContext(),"Must add a description",Toast.LENGTH_LONG).show();
-                                return;
-                            }
-                            if(email.toString().equals("")) {
-                                emailRef.setValue(email.getText().toString());
-                            }
-                            else {
-                                Toast.makeText(getApplicationContext(),"Must add an email",Toast.LENGTH_LONG).show();
-                                return;
-                            }
-                            if(keywords.toString().equals("")) {
-                                keywordsRef.setValue(keywords.getText().toString());
-                            }
-                            else {
-                                Toast.makeText(getApplicationContext(),"Must add keywords",Toast.LENGTH_LONG).show();
-                                return;
-                            }
-                            Toast.makeText(getApplicationContext(),"Congrats and welcome to ClubConnect!",Toast.LENGTH_LONG).show();
-                            return;
+
+                            newClubNames.setValue(club_name.getText().toString());
+                            descripRef.setValue(descrip.getText().toString());
+                            emailRef.setValue(email.getText().toString());
+                            keywordsRef.setValue(keywords.getText().toString());
+                            Toast.makeText(getApplicationContext(),"Congrats and welcome to ClubConnect",Toast.LENGTH_LONG).show();
 
                         }
                         else
-                        {
+                        { // If the same username was used, prompt the user to re-enter
                             Toast.makeText(getApplicationContext(),"Sorry, same username owns another club; can only own one club",Toast.LENGTH_LONG).show();
                             username.setText(""); // clear the text
                             return;
@@ -97,18 +74,6 @@ public class NewClubActivity extends Activity {
 
                     }
                 });
-                /* Write to database on save click
-                final DatabaseReference newClubusername = ref.child(username.getText().toString());
-                final DatabaseReference newClubNames = newClubusername.child("Name");
-                final DatabaseReference descripRef = newClubusername.child("Description");
-                final DatabaseReference emailRef = newClubusername.child("Email");
-                final DatabaseReference keywordsRef = newClubusername.child("Keywords");
-
-                newClubusername.setValue(username.getText().toString());
-                newClubNames.setValue(club_name.getText().toString());
-                descripRef.setValue(descrip.getText().toString());
-                emailRef.setValue(email.getText().toString());
-                keywordsRef.setValue(keywords.getText().toString());*/
             }
         });
 
