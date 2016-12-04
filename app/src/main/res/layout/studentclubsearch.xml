@@ -9,7 +9,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="16dp"
-    tools:context="com.example.abigail.clubconnecthomepage.Student_Search">
+    tools:context="com.example.abigail.ClubConnect.Student_Search">
 
     <ImageView
         android:layout_width="50dp"

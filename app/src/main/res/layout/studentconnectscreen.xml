@@ -9,13 +9,13 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context="com.example.abigail.clubconnecthomepage.Student_Connect">
+    tools:context="com.example.abigail.ClubConnect.Student_Connect">
 
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:srcCompat="@mipmap/cc"
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView"
         android:scaleType="fitStart"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="13dp"

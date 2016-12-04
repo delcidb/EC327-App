@@ -1,4 +1,4 @@
-package com.example.abigail.clubconnecthomepage;
+package com.example.abigail.ClubConnect;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,8 +15,8 @@ public class Club_Instruction extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.clubinstructionscreen);
 
-        Button button = (Button) findViewById(R.id.button6);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button button1 = (Button) findViewById(R.id.button6);
+        button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 Intent i = new Intent(v.getContext(), NewClubActivity.class);
@@ -28,6 +28,14 @@ public class Club_Instruction extends Activity {
             public void onClick(View v) {
 
                 Intent i = new Intent(v.getContext(), Edit_My_Club.class);
+                v.getContext().startActivity(i);
+            }
+        });
+        Button button3 = (Button) findViewById(R.id.button8);
+        button3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent i = new Intent(v.getContext(), Instructions_Menu.class);
                 v.getContext().startActivity(i);
             }
         });

@@ -1,4 +1,4 @@
-package com.example.abigail.clubconnecthomepage;
+package com.example.abigail.ClubConnect;
 
 import android.app.Activity;
 import android.os.Bundle;

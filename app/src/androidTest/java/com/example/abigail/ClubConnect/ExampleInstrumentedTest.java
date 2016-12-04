@@ -1,4 +1,4 @@
-package com.example.abigail.clubconnecthomepage;
+package com.example.abigail.ClubConnect;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
