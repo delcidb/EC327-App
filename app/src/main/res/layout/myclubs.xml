@@ -14,7 +14,7 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:srcCompat="@drawable/cc"
+        app:srcCompat="@mipmap/cc"
         android:id="@+id/imageView2"
         android:scaleType="fitStart"
         android:layout_alignParentTop="true"

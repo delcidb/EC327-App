@@ -25,7 +25,7 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:srcCompat="@drawable/cc"
+        app:srcCompat="@mipmap/cc"
         android:id="@+id/imageView2"
         android:scaleType="fitStart"
         android:layout_alignParentTop="true"
@@ -36,14 +36,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Username"
+        android:text="Email"
         android:ems="10"
         android:layout_below="@+id/textView"
         android:layout_marginTop="182dp"
         android:id="@+id/editText"
         android:textSize="30sp"
         android:textAlignment="center"
-        android:background="?attr/colorButtonNormal" />
+        android:background="@android:drawable/alert_light_frame" />
 
     <Button
         android:text="Login"
