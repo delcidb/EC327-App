@@ -33,7 +33,7 @@ Example Program Contact Information
 ------------------------------------
 Phone: 360-722-1450
 Email: knemes@bu.edu
-Link: //GitHub link
+Link: https://github.com/delcidb/EC327-App
 
 Copyright 2016 Team Name. All rights reserved. 
 Club Connect and its use are subject to a license agreement and are also suject to copyright, trademark, patent and/or other laws.
