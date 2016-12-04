@@ -14,24 +14,25 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:srcCompat="@drawable/cc"
+        app:srcCompat="@mipmap/cc"
         android:id="@+id/imageView2"
         android:scaleType="fitStart"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="13dp"
         android:layout_marginStart="13dp" />
-
-    <EditText
-        android:layout_width="300dp"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Search by name or keyword....."
-        android:ems="10"
-        android:layout_marginTop="19dp"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/imageView2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:text="Search Club"
+        android:textSize="36sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textAlignment="center"
+        android:paddingTop="8dp"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp" />
 
     <ListView
         android:layout_width="match_parent"
@@ -40,5 +41,15 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Search by name or keyword....."
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
