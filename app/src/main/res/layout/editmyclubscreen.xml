@@ -11,16 +11,6 @@
     android:paddingTop="16dp"
     tools:context="com.example.abigail.clubconnecthomepage.Edit_My_Club">
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:srcCompat="@drawable/cc"
-        android:id="@+id/imageView2"
-        android:scaleType="fitStart"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp" />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +26,7 @@
         android:layout_marginTop="36dp" />
 
     <TextView
-        android:text="EditInfo:"
+        android:text="Edit Info:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -49,17 +39,19 @@
         android:layout_marginStart="11dp"
         android:textColor="@android:color/background_dark" />
 
-    <Button
-        android:text="Save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="28dp"
-        android:id="@+id/button7"
-        android:textSize="24sp"
-        android:background="@android:color/holo_green_light"
-        style="@style/Widget.AppCompat.Button.Colored" />
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="textPersonName"
+    android:hint=" Username"
+    android:ems="10"
+    android:layout_marginTop="13dp"
+    android:id="@+id/editText20"
+    android:textSize="18sp"
+    android:layout_below="@+id/textView2"
+    android:layout_alignLeft="@+id/textView2"
+    android:layout_alignStart="@+id/textView2"
+    android:background="@android:drawable/alert_light_frame" />
 
     <EditText
         android:layout_width="match_parent"
@@ -67,13 +59,12 @@
         android:inputType="textPersonName"
         android:hint=" Name"
         android:ems="10"
-        android:layout_marginTop="18dp"
         android:id="@+id/editText7"
         android:textSize="18sp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
-        android:background="@android:drawable/alert_light_frame" />
+        android:background="@android:drawable/alert_light_frame"
+        android:layout_below="@+id/editText20"
+        android:layout_alignLeft="@+id/editText20"
+        android:layout_alignStart="@+id/editText20" />
 
     <EditText
         android:layout_width="match_parent"
@@ -110,4 +101,28 @@
         android:layout_below="@+id/editText9"
         android:layout_alignLeft="@+id/editText9"
         android:layout_alignStart="@+id/editText9" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/cc"
+        android:id="@+id/imageView2"
+        android:scaleType="fitStart"
+        android:contentDescription=""
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button7"
+        android:textSize="24sp"
+        android:background="@android:color/holo_green_light"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_above="@+id/editText20"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView" />/>
 </RelativeLayout>
