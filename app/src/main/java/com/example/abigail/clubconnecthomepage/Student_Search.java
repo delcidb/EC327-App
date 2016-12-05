@@ -3,14 +3,19 @@ package com.example.abigail.clubconnecthomepage;
 import android.app.Activity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+
 
 
 public class Student_Search extends Activity{
@@ -55,25 +60,37 @@ public class Student_Search extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.studentclubsearch);
 
-        ListView mListView = (ListView) findViewById(R.id.listview);
+        final ListView mListView = (ListView) findViewById(R.id.listview);
+        mListView.setClickable(true);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference ref = database.getReference("fir-practice-7403d");
 
-        FirebaseListAdapter mAdapter = new FirebaseListAdapter<UsersClubs>(this,UsersClubs.class,android.R.layout.two_line_list_item,ref) {
+        final FirebaseListAdapter mAdapter = new FirebaseListAdapter<UsersClubs>(this,UsersClubs.class,android.R.layout.two_line_list_item,ref) {
             @Override
-            protected void populateView(View v, UsersClubs usersClubs, int position) {
+            protected void populateView(View v, final UsersClubs usersClubs, int position) {
 
-                //Log.i("club",usersClubs.getName());
                 ((TextView)v.findViewById(android.R.id.text1)).setText(usersClubs.getName());
                 ((TextView)v.findViewById(android.R.id.text2)).setText(usersClubs.getEmail());
+
 
             }
         };
 
         mListView.setAdapter(mAdapter);
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View v, int position, long id) {
+
+                Object thing = mListView.getItemAtPosition(position);
+                //Log.i("class",thing.getClass().toString());
+                CharSequence message = (CharSequence)((UsersClubs) thing).getDescription();
+                //Log.i("class",message.toString());
+                Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
+
+            }
+        });
 
     }
-
 
 }
