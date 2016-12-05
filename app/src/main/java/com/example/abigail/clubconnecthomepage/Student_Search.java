@@ -1,75 +1,77 @@
 package com.example.abigail.clubconnecthomepage;
 
 import android.app.Activity;
+
 import android.os.Bundle;
+import android.view.View;
 
 import android.widget.ListView;
-import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
+import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
-
 
 
 public class Student_Search extends Activity{
 
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    final DatabaseReference ref = database.getReference("fir-practice-7403d");
+    public static class UsersClubs {
 
-    ListView listview;
-    ArrayList<String> list = new ArrayList<>();
-    ArrayAdapter<String> adapter;
+        private String Description;
+        private String Email;
+        private String Keywords;
+        private String Name;
+
+        public UsersClubs(){
+        }
+
+        public UsersClubs(String description, String email, String keywords, String name){
+            this.Description = description;
+            this.Email = email;
+            this.Keywords = keywords;
+            this.Name = name;
+        }
+
+        public String getDescription(){
+            return Description;
+        }
+
+        public String getEmail() {
+            return Email;
+        }
+
+        public String getKeywords(){
+            return Keywords;
+        }
+
+        public String getName() {
+            return Name;
+        }
+
+    }
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.studentclubsearch);
 
-        listview = (ListView)findViewById(R.id.listview);
+        ListView mListView = (ListView) findViewById(R.id.listview);
 
-        adapter = new ArrayAdapter<String>(this, R.layout.studentclubsearch, list);
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference ref = database.getReference("fir-practice-7403d");
 
-        listview.setAdapter(adapter);
-
-        ref.addChildEventListener(new ChildEventListener() {
+        FirebaseListAdapter mAdapter = new FirebaseListAdapter<UsersClubs>(this,UsersClubs.class,android.R.layout.two_line_list_item,ref) {
             @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                //list.add(dataSnapshot.getValue(String.class));
-                String value=dataSnapshot.getValue(String.class);
-                //System.out.print("Value of snapshot = ");
-                //System.out.println(value);
-                list.add(value);
-                adapter.notifyDataSetChanged();
-            }
+            protected void populateView(View v, UsersClubs usersClubs, int position) {
 
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                //Log.i("club",usersClubs.getName());
+                ((TextView)v.findViewById(android.R.id.text1)).setText(usersClubs.getName());
+                ((TextView)v.findViewById(android.R.id.text2)).setText(usersClubs.getEmail());
 
             }
+        };
 
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-                String value=dataSnapshot.getValue(String.class);
-                list.remove(value);
-                adapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+        mListView.setAdapter(mAdapter);
 
     }
 
