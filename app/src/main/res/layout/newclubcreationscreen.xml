@@ -9,7 +9,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="16dp"
-    tools:context="com.example.abigail.ClubConnect.NewClubActivity">
+    tools:context="com.example.abigail.clubconnecthomepage.NewClubActivity">
 
     <TextView
         android:layout_width="match_parent"

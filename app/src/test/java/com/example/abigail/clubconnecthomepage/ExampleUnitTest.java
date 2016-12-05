@@ -1,4 +1,4 @@
-package com.example.abigail.ClubConnect;
+package com.example.abigail.clubconnecthomepage;
 
 import org.junit.Test;
 

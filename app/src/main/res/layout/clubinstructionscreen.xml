@@ -9,7 +9,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context="com.example.abigail.ClubConnect.Club_Instruction">
+    tools:context="com.example.abigail.clubconnecthomepage.Club_Instruction">
 
     <ImageView
         android:layout_width="50dp"
