@@ -23,6 +23,7 @@
         <activity android:name="com.example.abigail.clubconnecthomepage.Edit_My_Club"> </activity>
         <activity android:name="com.example.abigail.clubconnecthomepage.Instructions_Menu"> </activity>
         <activity android:name="com.example.abigail.clubconnecthomepage.Main_Page"> </activity>
+        <activity android:name="com.example.abigail.clubconnecthomepage.Club_Favorites"></activity>
 
     </application>
 

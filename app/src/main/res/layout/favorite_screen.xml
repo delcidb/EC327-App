@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/instructionmenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.abigail.clubconnecthomepage.Club_Favorites">
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="100dp"
+        android:textSize="80sp"
+        android:text="Favorites"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:id="@+id/favorites"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/favorites"
+        android:textSize="20sp"
+        android:id="@+id/nameAdder"/>
+
+</RelativeLayout>
