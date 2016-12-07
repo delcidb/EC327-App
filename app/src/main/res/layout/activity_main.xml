@@ -12,28 +12,33 @@
     tools:context="com.example.abigail.clubconnecthomepage.Main_Page">
 
     <TextView
-        android:layout_width="match_parent"
+        android:text="C"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ClubConnect"
-        android:textSize="36sp"
+        android:id="@+id/textView3"
+        android:typeface="sans"
         android:textColor="@android:color/holo_red_dark"
-        android:textAlignment="center"
-        android:paddingTop="8dp"
+        android:textSize="44sp"
         android:layout_alignParentTop="true"
-        android:id="@+id/textView" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:srcCompat="@mipmap/cc"
-        android:id="@+id/imageView2"
-        android:scaleType="fitStart"
+    <TextView
+        android:text="C"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:typeface="sans"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="44sp"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/button5"
-        android:layout_alignStart="@+id/button5"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp" />
-
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Student"
@@ -63,12 +68,28 @@
 
     <Button
         android:text="Log Out"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/button2"
         android:layout_toStartOf="@+id/button2"
-        android:id="@+id/button5" />
+        android:id="@+id/button5"
+        android:background="@android:color/holo_green_light"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ClubConnect"
+        android:textSize="36sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textAlignment="center"
+        android:paddingTop="8dp"
+        android:id="@+id/textView"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

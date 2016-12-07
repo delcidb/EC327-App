@@ -12,20 +12,52 @@
     tools:context="com.example.abigail.clubconnecthomepage.Club_Favorites">
 
     <TextView
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:id="@+id/nameAdder"
+        android:layout_alignParentBottom="true"
+        android:hint="Add favorite clubs to your list by holding down on them on the previous screen!"
+        android:layout_height="400dp" />
+    <TextView
+        android:text="C"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:typeface="sans"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="44sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="C"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:typeface="sans"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="44sp"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
         android:layout_width="500dp"
-        android:layout_height="100dp"
-        android:textSize="80sp"
+        android:textSize="36sp"
         android:text="Favorites"
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_dark"
         android:id="@+id/favorites"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/favorites"
-        android:textSize="20sp"
-        android:id="@+id/nameAdder"/>
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

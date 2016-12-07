@@ -11,26 +11,34 @@
     android:paddingTop="16dp"
     tools:context="com.example.abigail.clubconnecthomepage.Club_Instruction">
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:srcCompat="@mipmap/cc"
-        android:id="@+id/imageView2"
-        android:scaleType="fitStart"
+    <TextView
+        android:text="C"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:typeface="sans"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="44sp"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
-        android:layout_width="400dp"
-        android:layout_height="150dp"
-        android:text="Instructions"
-        android:textSize="40sp"
+        android:text="C"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:typeface="sans"
         android:textColor="@android:color/holo_red_dark"
-        android:textAlignment="center"
-        android:paddingTop="48dp"
+        android:textSize="44sp"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
         android:layout_alignParentTop="true"
-        android:id="@+id/textView" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text=" "
@@ -40,20 +48,34 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:id="@+id/button9"
-        android:background="@android:drawable/ic_delete" />
+        android:background="@android:drawable/ic_delete"
+        android:backgroundTint="@android:color/holo_red_dark" />
 
     <TextView
         android:text="      Select new Club to create a New Club, or select Edit Club to make edits to your existing club.
-        You can only own one club per username. Make sure your username is spelled correctly. You must enter a username. Keywords should start with an uppercase letter. Students will search for clubs by keyword. Empty fields will not be edited.
+        You can only own one club per username. Make sure your username is spelled correctly. You must enter a username. When making a new club, it is recommended that you enter all fields. Empty fields will not be edited.
         Hit the save button to save changes or to create a new club. Come back and edit later. "
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="60dp"
         android:id="@+id/textView4"
         android:layout_below="@+id/button9"
-        android:layout_alignLeft="@+id/imageView2"
-        android:layout_alignStart="@+id/imageView2"
+
         android:textSize="22sp" />
+
+    <TextView
+        android:layout_height="150dp"
+        android:text="Instructions"
+        android:textSize="36sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textAlignment="center"
+        android:paddingTop="48dp"
+        android:id="@+id/textView"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="400dp" />
 
 
 </RelativeLayout>

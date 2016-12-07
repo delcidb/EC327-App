@@ -11,15 +11,36 @@
     android:paddingTop="16dp"
     tools:context="com.example.abigail.clubconnecthomepage.Student_Search">
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:srcCompat="@mipmap/cc"
-        android:id="@+id/imageView2"
-        android:scaleType="fitStart"
+
+    <TextView
+        android:text="C"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:typeface="sans"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="44sp"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="C"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:typeface="sans"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="44sp"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,19 +50,20 @@
         android:textAlignment="center"
         android:paddingTop="8dp"
         android:id="@+id/textView"
-        android:layout_alignParentTop="true"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="36dp" />
+        android:layout_alignParentStart="true" />
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:background="?attr/colorControlHighlight"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/listview"
+        android:layout_below="@+id/textView5"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/listview" />
+        android:layout_marginTop="80dp" />
 
     <TextView
         android:layout_width="300dp"
@@ -49,17 +71,24 @@
         android:ems="10"
         android:text = "Click for description, hold to favorite!"
         android:id="@+id/editText2"
+        android:textSize="20sp"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:text="Favorites"
+        android:id = "@+id/favButton"
+        android:textSize="22sp"
         android:layout_below="@+id/textView"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/imageView2"
-        android:layout_alignStart="@+id/imageView2" />
+        android:background="@android:color/holo_green_light" />
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_alignRight="@id/editText2"
-        android:text="Favorites"
-        android:id = "@+id/favButton"/>
 
 </RelativeLayout>

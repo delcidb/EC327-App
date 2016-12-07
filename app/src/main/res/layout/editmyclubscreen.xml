@@ -11,48 +11,6 @@
     android:paddingTop="16dp"
     tools:context="com.example.abigail.clubconnecthomepage.Edit_My_Club">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Edit Club"
-        android:textSize="36sp"
-        android:textColor="@android:color/holo_red_dark"
-        android:textAlignment="center"
-        android:paddingTop="8dp"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="36dp" />
-
-    <TextView
-        android:text="Edit Info:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:id="@+id/textView2"
-        android:textSize="24sp"
-        android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/imageView2"
-        android:layout_alignStart="@+id/imageView2"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp"
-        android:textColor="@android:color/background_dark" />
-
-    <EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:inputType="textPersonName"
-    android:hint=" Username"
-    android:ems="10"
-    android:layout_marginTop="13dp"
-    android:id="@+id/editText20"
-    android:textSize="18sp"
-    android:layout_below="@+id/textView2"
-    android:layout_alignLeft="@+id/textView2"
-    android:layout_alignStart="@+id/textView2"
-    android:background="@android:drawable/alert_light_frame" />
-
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -69,30 +27,6 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint=" Keywords"
-        android:ems="10"
-        android:id="@+id/editText8"
-        android:background="@android:drawable/alert_light_frame"
-        android:layout_below="@+id/editText7"
-        android:layout_alignLeft="@+id/editText7"
-        android:layout_alignStart="@+id/editText7" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/editText9"
-        android:hint=" Email"
-        android:background="@android:drawable/alert_light_frame"
-        android:layout_below="@+id/editText8"
-        android:layout_alignLeft="@+id/editText8"
-        android:layout_alignStart="@+id/editText8" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/editText10"
@@ -100,15 +34,38 @@
         android:background="@android:drawable/alert_light_frame"
         android:layout_below="@+id/editText9"
         android:layout_alignLeft="@+id/editText9"
-        android:layout_alignStart="@+id/editText9" />
+        android:layout_alignStart="@+id/editText9"
+        android:layout_alignParentBottom="true"
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:srcCompat="@mipmap/cc"
-        android:id="@+id/imageView2"
-        android:scaleType="fitStart"
-        android:contentDescription=""
+        android:singleLine="false"
+        android:verticalScrollbarPosition="right"
+        android:gravity="top" />
+
+    <TextView
+        android:text="C"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:typeface="sans"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="44sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="C"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:typeface="sans"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="44sp"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -124,5 +81,57 @@
         android:layout_above="@+id/editText20"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/textView" />/>
+        android:layout_below="@+id/textView" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText9"
+        android:hint=" Email"
+        android:background="@android:drawable/alert_light_frame"
+        android:layout_below="@+id/editText7"
+        android:layout_alignLeft="@+id/editText7"
+        android:layout_alignStart="@+id/editText7" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Club"
+        android:textSize="36sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textAlignment="center"
+        android:paddingTop="8dp"
+        android:id="@+id/textView"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="textPersonName"
+    android:hint=" Username"
+    android:ems="10"
+        android:id="@+id/editText20"
+    android:textSize="18sp"
+        android:background="@android:drawable/alert_light_frame"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Edit Info:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/textView2"
+        android:textSize="24sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/textView5"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5" />
+    />
 </RelativeLayout>
