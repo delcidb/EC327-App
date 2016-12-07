@@ -95,20 +95,19 @@ public class Student_Search extends Activity{
             @Override
             public boolean onItemLongClick(final AdapterView<?> p, View v,final int po, long id) {
 
-                if(favArray.size() < 18) { // Only allow 5 favorites to occur
-                    Object desired = mListView.getItemAtPosition(po);
 
-                    // Locally store the favorited club in the ArrayList
-                    CharSequence nameToSave = ((UsersClubs) desired).getName();
-                    CharSequence emailToSave = ((UsersClubs) desired).getEmail();
+                Object desired = mListView.getItemAtPosition(po);
 
-                    favArray.add(nameToSave);
-                    favArray.add(emailToSave);
+                // Locally store the favorited club in the ArrayList
+                CharSequence nameToSave = ((UsersClubs) desired).getName();
+                CharSequence emailToSave = ((UsersClubs) desired).getEmail();
 
-                    Toast.makeText(getApplicationContext(), "Added to Favorites!", Toast.LENGTH_LONG).show();
-                    return true; // Need this statement to be sure that onItemClick is not invoked too
-                }
-                return true;
+                favArray.add(nameToSave);
+                favArray.add(emailToSave);
+
+                Toast.makeText(getApplicationContext(), "Added to Favorites!", Toast.LENGTH_LONG).show();
+                return true; // Need this statement to be sure that onItemClick is not invoked too
+
             }
         });
 

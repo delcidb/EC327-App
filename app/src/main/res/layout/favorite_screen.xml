@@ -17,7 +17,9 @@
         android:id="@+id/nameAdder"
         android:layout_alignParentBottom="true"
         android:hint="Add favorite clubs to your list by holding down on them on the previous screen!"
-        android:layout_height="400dp" />
+        android:layout_height="400dp"
+        android:autoLink="email"
+        />
     <TextView
         android:text="C"
         android:textStyle="bold"

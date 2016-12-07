@@ -33,7 +33,6 @@ public class Edit_My_Club extends Activity{
         // UI Retrieval and storage for writing to the database
         final EditText username = (EditText)findViewById(R.id.editText20);
         final EditText club_name = (EditText)findViewById(R.id.editText7);
-        final EditText keywords = (EditText)findViewById(R.id.editText8);
         final EditText email = (EditText)findViewById(R.id.editText9);
         final EditText descrip = (EditText)findViewById(R.id.editText10);
 
@@ -54,7 +53,6 @@ public class Edit_My_Club extends Activity{
                             final DatabaseReference newClubNames = newClubusername.child("Name");
                             final DatabaseReference descripRef = newClubusername.child("Description");
                             final DatabaseReference emailRef = newClubusername.child("Email");
-                            final DatabaseReference keywordsRef = newClubusername.child("Keywords");
 
 
                             newClubusername.setValue(username.getText().toString());
@@ -65,14 +63,6 @@ public class Edit_My_Club extends Activity{
                             }
                             else {
                                 newClubNames.setValue(club_name.getText().toString());
-                            }
-                            if(keywords.getText().toString().matches("")) {
-                                // If nothing was entered, keep the current value in the name key:value
-                                String val_k = dataSnapshot.child(username.getText().toString()).child("Keywords").getValue().toString();
-                                keywordsRef.setValue(val_k);
-                            }
-                            else {
-                                keywordsRef.setValue(keywords.getText().toString());
                             }
                             if(email.getText().toString().matches("")) {
                                 // If nothing was entered, keep the current value in the name key:value

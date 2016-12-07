@@ -33,7 +33,6 @@ public class NewClubActivity extends Activity {
         // UI Retrieval and storage for writing to the database
         final EditText username = (EditText)findViewById(R.id.editText20);
         final EditText club_name = (EditText)findViewById(R.id.editText7);
-        final EditText keywords = (EditText)findViewById(R.id.editText8);
         final EditText email = (EditText)findViewById(R.id.editText9);
         final EditText descrip = (EditText)findViewById(R.id.editText10);
 
@@ -51,13 +50,11 @@ public class NewClubActivity extends Activity {
                             final DatabaseReference newClubNames = newClubusername.child("Name");
                             final DatabaseReference descripRef = newClubusername.child("Description");
                             final DatabaseReference emailRef = newClubusername.child("Email");
-                            final DatabaseReference keywordsRef = newClubusername.child("Keywords");
 
 
                             newClubNames.setValue(club_name.getText().toString());
                             descripRef.setValue(descrip.getText().toString());
                             emailRef.setValue(email.getText().toString());
-                            keywordsRef.setValue(keywords.getText().toString());
                             Toast.makeText(getApplicationContext(),"Congrats and welcome to ClubConnect",Toast.LENGTH_LONG).show();
 
                         }

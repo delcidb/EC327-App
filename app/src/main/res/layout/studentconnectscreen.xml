@@ -11,15 +11,34 @@
     android:paddingTop="16dp"
     tools:context="com.example.abigail.clubconnecthomepage.Student_Connect">
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:srcCompat="@mipmap/cc"
-        android:id="@+id/imageView"
-        android:scaleType="fitStart"
+    <TextView
+        android:text="C"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:typeface="sans"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="44sp"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="C"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:typeface="sans"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="44sp"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="match_parent"
@@ -44,34 +63,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="123dp" />
 
-    <TextView
-        android:text="C"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView5"
-        android:typeface="sans"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="44sp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="21dp" />
-
-
-    <TextView
-        android:text="C"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:typeface="sans"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="44sp"
-        android:layout_marginRight="14dp"
-        android:layout_marginEnd="14dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
