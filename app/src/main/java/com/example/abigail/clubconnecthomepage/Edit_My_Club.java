@@ -47,7 +47,10 @@ public class Edit_My_Club extends Activity{
                 ref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.hasChild(username.getText().toString()))
+                        if(username.getText().toString().matches("")) {
+                            Toast.makeText(getApplicationContext(), "Please enter Username information!!", Toast.LENGTH_LONG).show();
+                        }
+                        else if(dataSnapshot.hasChild(username.getText().toString()))
                         {
                             final DatabaseReference newClubusername = ref.child(username.getText().toString());
                             final DatabaseReference newClubNames = newClubusername.child("Name");

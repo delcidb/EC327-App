@@ -145,15 +145,12 @@ public class Student_Search extends Activity{
 
         /* The following changes the ListView to adapt to keyword search functionality
         Button searchButton = (Button) findViewById(R.id.searchButton);
-
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //mListView.setAdapter(null); // Set the List View to store nothing to prep for search match
-
                 //String keywordEntered = ""; // Clear the keyword entered to hold new EditText entry
                 ArrayList<Integer> intArray = new ArrayList<>();
-
                 EditText keyTextField = (EditText) findViewById(R.id.editText2);
                 String keywordEntered = keyTextField.getText().toString();
                 Log.i("size",String.valueOf(keyArr.size()));
@@ -164,24 +161,16 @@ public class Student_Search extends Activity{
                     Log.i("Key at INDEX",keywordEntered);
                     if(keywordAtIndex.matches(keywordEntered))
                     {
-
                         Log.i("Indexed keyword IF",keywordAtIndex);
-
                     }
                     else
                     {
-
                         intArray.add(i); // Add the object index into the intArray to indicate it wont populate list
                         Log.i("Indexed keyword ELSE",keywordAtIndex);
-
                     }
-
                 }
                 Log.i("SIZEAFTER",String.valueOf(intArray.size()));
-
             }
-
-
         });*/
 
 

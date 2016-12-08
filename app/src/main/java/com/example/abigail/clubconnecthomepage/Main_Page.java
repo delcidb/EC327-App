@@ -37,9 +37,7 @@ public class Main_Page extends Activity{
         Button button3 = (Button) findViewById(R.id.button5);
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
-                Intent i = new Intent(v.getContext(), MainActivity.class);
-                v.getContext().startActivity(i);
+                finish();
             }
         });
 

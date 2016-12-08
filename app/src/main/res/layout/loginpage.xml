@@ -9,7 +9,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="16dp"
-    tools:context="com.example.abigail.clubconnecthomepage.MainActivity">
+    tools:context="com.example.abigail.clubconnecthomepage.Login_Page">
 
     <TextView
         android:text="C"
@@ -95,7 +95,7 @@
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:hint="Password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:textAlignment="center"
         android:background="@android:drawable/alert_light_frame"
         android:layout_above="@+id/button3"
