@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/loginpage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="16dp"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="16dp"
-    tools:context="com.example.abigail.clubconnecthomepage.MainActivity">
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="16dp"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="16dp"
+        app:layout_behavior="!string/appbar_scrolling_view_behavior">
 
     <TextView
         android:text="C"
@@ -40,6 +47,17 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+        <Button
+            android:textSize="24sp"
+            android:layout_above="@+id/btn_reset_password"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/button3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@android:color/holo_red_dark"
+            android:text="@string/btn_login"
+            android:textColor="@android:color/white" />
 
     <Button
         android:id="@+id/btn_signup"
@@ -53,6 +71,8 @@
         android:textColor="@android:color/holo_red_dark"
         android:textSize="15dp" />
 
+        <!--Link to login screen-->
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="30dp"
@@ -62,32 +82,36 @@
         android:visibility="gone" />
 
     <Button
+
+        android:textSize="15dp"
         android:id="@+id/btn_reset_password"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@null"
-        android:text="Forgot your password?"
-        android:textAllCaps="false"
-        android:textColor="@android:color/holo_red_dark"
         android:layout_marginBottom="13dp"
-        android:layout_above="@+id/btn_signup"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/btn_signup"
+        android:layout_marginTop="20dip"
+        android:background="@null"
+        android:text="@string/btn_forgot_password"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_red_dark"/>
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Email"
+        android:hint="@string/hint_email"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/email"
         android:textSize="30sp"
+        android:textColor="@android:color/black"
         android:textAlignment="center"
         android:background="@android:drawable/alert_light_frame"
         android:layout_above="@+id/button3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="79dp" />
+        android:layout_marginBottom="79dp"
+        android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/password"
@@ -95,22 +119,14 @@
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:hint="Password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:textAlignment="center"
         android:background="@android:drawable/alert_light_frame"
         android:layout_above="@+id/button3"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black" />
 
-    <Button
-        android:text="Login"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/button3"
-        android:textSize="24sp"
-        android:background="@android:color/holo_green_light"
-        android:layout_above="@+id/btn_reset_password"
-        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="match_parent"
@@ -126,4 +142,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-</RelativeLayout>
+    </RelativeLayout>
+
+    </android.support.design.widget.CoordinatorLayout>

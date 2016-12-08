@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.abigail.clubconnecthomepage">
 
     <application
@@ -8,23 +9,34 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.abigail.clubconnecthomepage.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.abigail.clubconnecthomepage.Club_Instruction"> </activity>
-        <activity android:name="com.example.abigail.clubconnecthomepage.NewClubActivity"> </activity>
-        <activity android:name="com.example.abigail.clubconnecthomepage.Student_Connect"> </activity>
-        <activity android:name="com.example.abigail.clubconnecthomepage.Student_Search"
-            android:windowSoftInputMode="adjustPan"> </activity>
-        <activity android:name="com.example.abigail.clubconnecthomepage.Edit_My_Club"> </activity>
-        <activity android:name="com.example.abigail.clubconnecthomepage.Instructions_Menu"> </activity>
-        <activity android:name="com.example.abigail.clubconnecthomepage.Main_Page"> </activity>
-        <activity android:name="com.example.abigail.clubconnecthomepage.Club_Favorites"></activity>
-
+        <activity android:name=".Club_Instruction" />
+        <activity android:name=".NewClubActivity" />
+        <activity android:name=".Student_Connect" />
+        <activity
+            android:name=".Student_Search"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Edit_My_Club" />
+        <activity android:name=".Instructions_Menu" />
+        <activity android:name=".Main_Page" />
+        <activity android:name=".Club_Favorites" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:label="@string/title_activity_reset_password"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SignupActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
