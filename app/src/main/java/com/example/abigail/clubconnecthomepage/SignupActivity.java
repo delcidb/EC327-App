@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.text.method.SingleLineTransformationMethod;
 import android.view.LayoutInflater;
@@ -31,12 +30,8 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
         auth = FirebaseAuth.getInstance();    //Get Firebase auth instance
 
-        final Button btnSignIn = (Button) findViewById(R.id.sign_in_button);
         final Button btnSignUp = (Button) findViewById(R.id.sign_up_button);
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
@@ -51,12 +46,6 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
-        btnSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
