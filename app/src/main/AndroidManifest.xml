@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Club_Instruction" />
+        <activity android:name=".Club_Instruction"
+            android:label="@string/app_name"/>
         <activity android:name=".NewClubActivity" />
         <activity android:name=".Student_Connect" />
         <activity
@@ -26,14 +27,11 @@
         <activity android:name=".Instructions_Menu" />
         <activity android:name=".Main_Page" />
         <activity android:name=".Club_Favorites" />
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login"/>
-        <activity
-            android:name=".ResetPasswordActivity"
-            android:label="@string/title_activity_reset_password"/>
-        <activity
-            android:name=".SignupActivity"></activity>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".ResetPasswordActivity"/>
+        <activity android:name=".SignupActivity"/>
+
+
     </application>
 
 </manifest>
