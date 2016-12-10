@@ -61,7 +61,7 @@
         android:maxLines="1"
         android:singleLine="true"
         android:layout_marginBottom="53dp"
-        android:layout_above="@+id/change_email_button"
+        android:layout_below="@+id/textView"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -74,7 +74,7 @@
         android:maxLines="1"
         android:singleLine="true"
         android:layout_alignBaseline="@+id/password"
-        android:layout_alignBottom="@+id/password"
+        android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -132,55 +132,9 @@
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:layout_below="@+id/textView5"
+        android:layout_above="@+id/change_password_button"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <Button
-        android:id="@+id/send"
-        style="?android:textAppearanceSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/btn_send"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:id="@+id/changePass"
-        style="?android:textAppearanceSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/btn_change"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:layout_alignBaseline="@+id/remove"
-        android:layout_alignBottom="@+id/remove"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        />
-
-    <Button
-        android:id="@+id/changeEmail"
-        style="?android:textAppearanceSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/btn_change"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:layout_alignBaseline="@+id/remove"
-        android:layout_alignBottom="@+id/remove"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        />
 
     <EditText
         android:id="@+id/old_email"
@@ -191,7 +145,7 @@
         android:maxLines="1"
         android:singleLine="true"
         android:layout_alignBaseline="@+id/password"
-        android:layout_alignBottom="@+id/password"
+        android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -207,7 +161,7 @@
         android:maxLines="1"
         android:singleLine="true"
         android:layout_alignBaseline="@+id/password"
-        android:layout_alignBottom="@+id/password"
+        android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textStyle="bold"/>
@@ -251,6 +205,48 @@
         android:layout_above="@+id/remove_user_button"
         android:layout_alignLeft="@+id/remove_user_button"
         android:layout_alignStart="@+id/remove_user_button" />
+
+    <Button
+        android:id="@+id/changeEmail"
+        style="?android:textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/btn_change"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_above="@+id/change_password_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/changePass"
+        style="?android:textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/btn_change"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_above="@+id/change_password_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/send"
+        style="?android:textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/btn_send"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_above="@+id/change_password_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>
