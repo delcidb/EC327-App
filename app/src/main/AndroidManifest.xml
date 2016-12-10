@@ -28,15 +28,12 @@
         <activity android:name=".Club_Favorites" />
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_login"/>
         <activity
             android:name=".ResetPasswordActivity"
-            android:label="@string/title_activity_reset_password"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_reset_password"/>
         <activity
-            android:name=".SignupActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".SignupActivity"></activity>
     </application>
 
 </manifest>

@@ -18,19 +18,19 @@ public class Main_Page extends Activity{
 
         Button button = (Button) findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
-          public void onClick(View v) {
+            public void onClick(View v) {
 
-         Intent i = new Intent(v.getContext(), Club_Instruction.class);
-         v.getContext().startActivity(i);
+                Intent i = new Intent(v.getContext(), Club_Instruction.class);
+                v.getContext().startActivity(i);
             }
         });
 
         Button button2 = (Button) findViewById(R.id.button);
         button2.setOnClickListener(new View.OnClickListener() {
-         public void onClick(View v) {
+            public void onClick(View v) {
 
-              Intent i = new Intent(v.getContext(), Student_Connect.class);
-              v.getContext().startActivity(i);
+                Intent i = new Intent(v.getContext(), Student_Connect.class);
+                v.getContext().startActivity(i);
             }
         });
 
