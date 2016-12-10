@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="16dp"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".SignupActivity">
 
 
         <android.support.design.widget.TextInputLayout

@@ -18,35 +18,30 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
-
-    private EditText inputEmail, inputPassword;
-    private FirebaseAuth auth;
-    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loginpage); // activity_main is the id for the homepage
 
-        auth = FirebaseAuth.getInstance(); // get firebase auth instance
+        final FirebaseAuth auth = FirebaseAuth.getInstance(); // get firebase auth instance
 
         if (auth.getCurrentUser() != null) {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
             finish();
         }
 
-        inputEmail = (EditText) findViewById(R.id.email);
-        inputPassword = (EditText) findViewById(R.id.password);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        final EditText inputEmail = (EditText) findViewById(R.id.email);
+        final EditText inputPassword = (EditText) findViewById(R.id.password);
+        //final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
         final Button btnSignup = (Button) findViewById(R.id.btn_signup);
         final Button button3 = (Button) findViewById(R.id.button3);
         final Button btnReset = (Button) findViewById(R.id.btn_reset_password);
 
-
-        //Get Firebase auth instance
-        auth = FirebaseAuth.getInstance();
 
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                progressBar.setVisibility(View.VISIBLE);
+                //progressBar.setVisibility(View.VISIBLE);
 
                 //authenticate user
                 auth.signInWithEmailAndPassword(email, password)
@@ -89,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                                 // If sign in fails, display a message to the user. If sign in succeeds
                                 // the auth state listener will be notified and logic to handle the
                                 // signed in user can be handled in the listener.
-                                progressBar.setVisibility(View.GONE);
+                                //progressBar.setVisibility(View.GONE);
                                 if (!task.isSuccessful()) {
                                     // there was an error
                                     if (password.length() < 6) {

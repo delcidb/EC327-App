@@ -18,33 +18,23 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
+
+import static android.R.id.message;
 
 public class SignupActivity extends AppCompatActivity {
-
-    private EditText inputEmail, inputPassword;
-    private ProgressBar progressBar;
-    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        auth = FirebaseAuth.getInstance();    //Get Firebase auth instance
+        final FirebaseAuth auth = FirebaseAuth.getInstance();    //Get Firebase auth instance
 
         final Button btnSignUp = (Button) findViewById(R.id.sign_up_button);
-        inputEmail = (EditText) findViewById(R.id.email);
-        inputPassword = (EditText) findViewById(R.id.password);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        final Button btnResetPassword = (Button) findViewById(R.id.btn_reset_password);
-
-        btnResetPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //resetPassword();
-                startActivity(new Intent(SignupActivity.this, ResetPasswordActivity.class));
-            }
-        });
+        final EditText inputEmail = (EditText) findViewById(R.id.email);
+        final EditText inputPassword = (EditText) findViewById(R.id.password);
+        //final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
@@ -68,14 +58,14 @@ public class SignupActivity extends AppCompatActivity {
                     return;
                 }
 
-                progressBar.setVisibility(View.VISIBLE);
+//                progressBar.setVisibility(View.VISIBLE);
                 //create user
                 auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(SignupActivity.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
-                                progressBar.setVisibility(View.GONE);
+                                Toast.makeText(SignupActivity.this, "Welcome to Club Connect!" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
+                                //progressBar.setVisibility(View.GONE);
                                 // If sign in fails, display a message to the user. If sign in succeeds
                                 // the auth state listener will be notified and logic to handle the
                                 // signed in user can be handled in the listener.
@@ -96,6 +86,6 @@ public class SignupActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        progressBar.setVisibility(View.GONE);
+        //progressBar.setVisibility(View.GONE);
     }
 }
