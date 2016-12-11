@@ -22,6 +22,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+     //ResetPasswordActivity connects to activity_reset_password
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset_password);
 
@@ -31,7 +32,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
-
+     //Promps user to enter email
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,7 +43,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
                     Toast.makeText(getApplication(), "Enter your registered email id", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
+         //Actions to be taken to reset password
                 progressBar.setVisibility(View.VISIBLE);
                 auth.sendPasswordResetEmail(email)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {

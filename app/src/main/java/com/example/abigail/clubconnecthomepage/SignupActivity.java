@@ -26,6 +26,7 @@ public class SignupActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+     //SignupActivity connects to activity_signup
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
@@ -34,9 +35,8 @@ public class SignupActivity extends AppCompatActivity {
         final Button btnSignUp = (Button) findViewById(R.id.sign_up_button);
         final EditText inputEmail = (EditText) findViewById(R.id.email);
         final EditText inputPassword = (EditText) findViewById(R.id.password);
-        //final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
-
+     //The following actions prompt the user for email and password; also tells if the password is too short
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,14 +58,13 @@ public class SignupActivity extends AppCompatActivity {
                     return;
                 }
 
-//                progressBar.setVisibility(View.VISIBLE);
+
                 //create user
                 auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 Toast.makeText(SignupActivity.this, "Welcome to Club Connect!" , Toast.LENGTH_SHORT).show();
-                                //progressBar.setVisibility(View.GONE);
                                 // If sign in fails, display a message to the user. If sign in succeeds
                                 // the auth state listener will be notified and logic to handle the
                                 // signed in user can be handled in the listener.
@@ -86,6 +85,5 @@ public class SignupActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        //progressBar.setVisibility(View.GONE);
     }
 }

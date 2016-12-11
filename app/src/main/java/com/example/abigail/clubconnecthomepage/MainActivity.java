@@ -25,24 +25,24 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+     //MainActivity links to loginpage
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.loginpage); // activity_main is the id for the homepage
+        setContentView(R.layout.loginpage); // loginpage is the id for the homepage
 
         final FirebaseAuth auth = FirebaseAuth.getInstance(); // get firebase auth instance
-
+     //If username is valid, proceed with the login
         if (auth.getCurrentUser() != null) {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
             finish();
         }
-
+     //Links buttons
         final EditText inputEmail = (EditText) findViewById(R.id.email);
         final EditText inputPassword = (EditText) findViewById(R.id.password);
-        //final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
         final Button btnSignup = (Button) findViewById(R.id.btn_signup);
         final Button button3 = (Button) findViewById(R.id.button3);
         final Button btnReset = (Button) findViewById(R.id.btn_reset_password);
 
-
+     //If user wishes to signup, go to activity_signup
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+     //If user wishes to reset password, go to activity_reset_password
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,23 +59,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+     //Actions to collect user input in order to login
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String email = inputEmail.getText().toString();
                 final String password = inputPassword.getText().toString();
-
+     //Tells user to input email address if there is invalid input
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
+     //Tells user to input password if there is invalid input
                 if (TextUtils.isEmpty(password)) {
                     Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                //progressBar.setVisibility(View.VISIBLE);
 
                 //authenticate user
                 auth.signInWithEmailAndPassword(email, password)

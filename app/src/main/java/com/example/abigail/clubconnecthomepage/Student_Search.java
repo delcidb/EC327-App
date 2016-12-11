@@ -26,6 +26,7 @@ import java.util.ArrayList;
 
 public class Student_Search extends Activity{
 
+    //Defines objects and variables
     public static class UsersClubs {
 
         private String Description;
@@ -61,6 +62,7 @@ public class Student_Search extends Activity{
 
     }
 
+    //Student_Search connects to studentclubsearch
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

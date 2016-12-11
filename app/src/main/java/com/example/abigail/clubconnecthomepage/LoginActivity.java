@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
-
+    //Definition of buttons
     private Button changeEmail;
     private Button changePassword;
     private Button sendEmail;
@@ -32,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener authListener;
     private FirebaseAuth auth;
 
+    //LoginActivity links to activity_login
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +57,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         };
 
+        //Links buttons
         final Button btnChangeEmail = (Button) findViewById(R.id.change_email_button);
         final Button btnChangePassword = (Button) findViewById(R.id.change_password_button);
         final Button btnSendResetEmail = (Button) findViewById(R.id.sending_pass_reset_button);
@@ -86,6 +88,7 @@ public class LoginActivity extends AppCompatActivity {
             progressBar.setVisibility(View.GONE);
         }
 
+        //Actions to be taken when email is changed
         btnChangeEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -126,6 +129,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        //Actions to be taken if password is changed
         btnChangePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -170,7 +174,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
+        //Actions to be taken if reset-email is to be sent out
         btnSendResetEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -209,7 +213,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
+        //Actions to be taken if user deletes account
         btnRemoveUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

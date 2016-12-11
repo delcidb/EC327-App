@@ -11,10 +11,12 @@ import android.widget.Button;
  */
 
 public class Student_Connect extends Activity {
+    //Student_Connect links to studentconnectscreen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.studentconnectscreen);
 
+     //Button links to studentclubsearch
         Button button = (Button) findViewById(R.id.button4);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

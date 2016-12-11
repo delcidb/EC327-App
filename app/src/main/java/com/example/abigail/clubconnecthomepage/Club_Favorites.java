@@ -18,16 +18,16 @@ public class Club_Favorites extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+    //Club_Favorites links to the favorite_screen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.favorite_screen);
-
+    //This code gets the favorites array from the previous screen
         Intent intent = getIntent();
         ArrayList<String> favArray = intent.getStringArrayListExtra("favArray");
 
         TextView setTextFavs = (TextView) findViewById(R.id.nameAdder);
         setTextFavs.setMovementMethod(new ScrollingMovementMethod());
-
+    //This part of the code displays the favorites list. It pulls it from the previous screen
         for (int i = 0; i < favArray.size(); i ++) {
 
             if(i == 0){

@@ -21,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Edit_My_Club extends Activity{
     protected void onCreate(Bundle savedInstanceState)
     {
+     //Edit_My_Club links to the editmyclubscreen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.editmyclubscreen);
 
@@ -47,9 +48,11 @@ public class Edit_My_Club extends Activity{
                 ref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
+                     //First if statement error checks for cases when no username is entered
                         if(username.getText().toString().matches("")) {
                             Toast.makeText(getApplicationContext(), "Please enter Username information!!", Toast.LENGTH_LONG).show();
                         }
+                     //If username is entered, then the edits can be carried out
                         else if(dataSnapshot.hasChild(username.getText().toString()))
                         {
                             final DatabaseReference newClubusername = ref.child(username.getText().toString());
@@ -64,6 +67,7 @@ public class Edit_My_Club extends Activity{
                                 String val = dataSnapshot.child(username.getText().toString()).child("Name").getValue().toString();
                                 newClubNames.setValue(val);
                             }
+                            //Changes name
                             else {
                                 newClubNames.setValue(club_name.getText().toString());
                             }
@@ -72,6 +76,7 @@ public class Edit_My_Club extends Activity{
                                 String val_n = dataSnapshot.child(username.getText().toString()).child("Email").getValue().toString();
                                 emailRef.setValue(val_n);
                             }
+                            //Changes email
                             else {
                                 emailRef.setValue(email.getText().toString());
                             }
@@ -80,6 +85,7 @@ public class Edit_My_Club extends Activity{
                                 String val_d = dataSnapshot.child(username.getText().toString()).child("Description").getValue().toString();
                                 descripRef.setValue(val_d);
                             }
+                            //Changes description
                             else {
                                 descripRef.setValue(descrip.getText().toString());
                             }
@@ -88,12 +94,13 @@ public class Edit_My_Club extends Activity{
                             Toast.makeText(getApplicationContext(),"Update Successful!",Toast.LENGTH_LONG).show();
 
                         }
+                        //Error checking for if username is spelled incorrectly
                         else
                         {
                             Toast.makeText(getApplicationContext(),"Check username accuracy; must have accurate username that corresponds to club to overwrite",Toast.LENGTH_LONG).show();
                         }
                     }
-
+                //No functionality added to uncancel
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
 

@@ -22,6 +22,7 @@ public class NewClubActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState)
     {
+     //NewClubActivity connects to newclubcreationscreen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.newclubcreationscreen);
 
