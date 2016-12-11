@@ -27,10 +27,8 @@ Hold club name to add club to favorites.
 Press log out to change password, change email, send password reset email, remove user, or sign out.
 
 
-Program Contact Information
-------------------------------------
-Phone: 360-722-1450
-Email: knemes@bu.edu
+Program Code Source
+--------------------
 Link: https://github.com/delcidb/EC327-App
 
 Copyright 2016 ClubConnect. All rights reserved. 
