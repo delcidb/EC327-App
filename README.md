@@ -12,6 +12,11 @@ GENERAL USAGE NOTES
 
 - One username corresponds to one club.
 
+Compiling Directions
+--------------------
+Check dependency file to be sure that all added dependecies are updated to the newest version.
+Also, be sure that you have internet connection, since the app uses Firebase which is a remote server.
+
 
 Installing on Android mobile
 -----------------------------
@@ -34,3 +39,4 @@ Link: https://github.com/delcidb/EC327-App
 Copyright 2016 ClubConnect. All rights reserved. 
 Club Connect and its use are subject to a license agreement and are also suject to copyright, trademark, patent and/or other laws.
 All other brand and product names are trademarks or registered.
+
